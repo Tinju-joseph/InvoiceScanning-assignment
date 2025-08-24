@@ -1,9 +1,8 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import ButtonComponent from '../../components/ButtonComponent/ButtonComponent';
 
 const HomeScreen = ({navigation}) => {
-
   const onScanClick = () => {
     console.log('scan invoice');
     navigation.navigate('Scan');
@@ -11,14 +10,8 @@ const HomeScreen = ({navigation}) => {
 
   return (
     <View style={styles.mainContainer}>
-      <Text style={styles.title}>qred</Text>
-      
-        <ButtonComponent 
-          title="Take Picture of Invoice" 
-          onPress={onScanClick}
-        />
-     
-     </View>
+      <ButtonComponent title="Take Picture of Invoice" onPress={onScanClick} />
+    </View>
   );
 };
 
@@ -36,12 +29,10 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
     textAlign: 'center',
     color: '#333',
-    fontWeight:"bold",
+    fontWeight: 'bold',
     position: 'absolute',
     top: 70,
   },
-  
-
 });
 
 export default HomeScreen;
